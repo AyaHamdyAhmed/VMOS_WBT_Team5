@@ -8,8 +8,7 @@ import vehicle.hal.Temp;
 import org.junit.jupiter.api.Test;
 
 
-class StateTest {
-	
+class StateTest {	
 	State stateObj;
 
 	@Test
@@ -17,11 +16,22 @@ class StateTest {
 		stateObj = new State();
 		Temp.r1 = 1;
 		Temp.r2 = 2;
-		boolean ret = stateObj.bValidateFailure();
-		
+		boolean ret = stateObj.bValidateFailure();	
 		assertEquals(1, Temp.validateCall1);
 		assertEquals(1, Temp.validateCall2);
 		assertTrue(ret);
+	}
+	
+	@Test
+	void testbValidateFailure_F() {
+		stateObj = new State();
+		Temp.r1 = 1;
+		Temp.r2 =  1;
+		boolean returnResult = stateObj.bValidateFailure();
+		assertEquals(false, returnResult);
+		assertEquals(Temp.validateCall1, 1);
+		assertEquals(Temp.validateCall2, 1);
+		
 	}
 	
 	@Test
