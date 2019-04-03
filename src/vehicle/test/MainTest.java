@@ -8,9 +8,10 @@ import vehicle.app.State;
 import vehicle.hal.LCD;
 import vehicle.hal.Motor;
 
-class MainTest {
+public class MainTest {
 	@Test
 	void validateMaintest() {
+		// soft assert
 		assertAll(
 				() -> assertEquals(1, State.validate_call_bValidateGoToNextState),
 				()-> assertEquals(0,Motor.motorState),
