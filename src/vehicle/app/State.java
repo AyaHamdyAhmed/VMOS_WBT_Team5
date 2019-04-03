@@ -1,7 +1,10 @@
 package vehicle.app;
 
 public class State {
+<<<<<<< HEAD
 
+=======
+>>>>>>> master
 	
 	public static int validate_call_times=0;
 	public static int validate_call_bValidateFailure =0;
@@ -10,11 +13,14 @@ public class State {
 	public static int validate_call_bValidateGoToNextState=0;
 	public static int validate_call_number = 0;
 	
+<<<<<<< HEAD
+=======
+
+>>>>>>> master
 	public Boolean bValidateFailure()
 	{
 		validate_call_times++ ;
 		validate_call_bValidateFailure=1;
-		
 		return true;
 	}
 
@@ -32,6 +38,7 @@ public class State {
 		return false;
 	}
 
+<<<<<<< HEAD
 
 	public void vidGoToNextState()
 	{
@@ -41,3 +48,9 @@ public class State {
  
 		
 	
+=======
+	public void vidGoToNextState() {
+		validate_call_bValidateGoToNextState++;
+	}
+}
+>>>>>>> master
