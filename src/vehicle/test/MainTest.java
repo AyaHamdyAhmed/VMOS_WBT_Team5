@@ -14,6 +14,7 @@ class MainTest {
 	@Test
 	void validateMaintest() {
 		state = new State();
+
 		assertAll(() -> assertEquals(1, state.validate_call_bValidateGoToNextState),
 				() -> assertEquals(1, Motor.motorCall),
 				() -> assertEquals(1, LCD.lcdcall),
