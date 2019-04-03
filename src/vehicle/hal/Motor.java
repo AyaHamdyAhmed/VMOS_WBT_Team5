@@ -7,7 +7,7 @@ public class Motor {
 public static void vidOutput(int state) {
 		motorCall++;
 		motorState=state;
-		LCD.lcdSequenceNumber=2;
+		LCD.SequenceNumber=2;
 		
 	}
 }

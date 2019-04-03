@@ -7,6 +7,7 @@ public class State {
 	public static int validate_call_bValidateFailure =0;
 	public static int validate_call_bValidateLowPerformance =0;
 	public static int validate_call_bValidateHighPerformance =0;
+	public static int validate_call_bValidateGoToNextState=0;
 	public static int validate_call_number = 0;
 	
 	public Boolean bValidateFailure()
@@ -34,7 +35,7 @@ public class State {
 
 	public void vidGoToNextState()
 	{
-	
+		validate_call_bValidateGoToNextState++;
 	}
 }
  
