@@ -4,12 +4,16 @@ import static org.junit.jupiter.api.Assertions.*;
 
 import org.junit.jupiter.api.Test;
 
-class MainTest {
+import vehicle.app.State;
 
+class MainTest {
+	State state;
 	@Test
 	void validateMaintest() {
+		state = new State();
 		assertAll(
-				()-> assertEquals();
+				()-> assertEquals(1,state.vidGoToNextState()),
+				
 				
 				);
 	
