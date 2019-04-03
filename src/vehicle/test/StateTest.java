@@ -17,10 +17,6 @@ class StateTest {
 		Temp.r1 = 1;
 		Temp.r2 = 2;
 		boolean ret = stateObj.bValidateFailure();	
-		assertEquals(1, Temp.validateCall1);
-		assertEquals(1, Temp.validateCall2);
-		assertTrue(ret);
-		
 		assertAll(
 				
 				() ->	assertEquals(1, Temp.validateCall1),
