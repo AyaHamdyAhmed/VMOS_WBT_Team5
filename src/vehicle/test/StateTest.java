@@ -20,6 +20,14 @@ class StateTest {
 		assertEquals(1, Temp.validateCall1);
 		assertEquals(1, Temp.validateCall2);
 		assertTrue(ret);
+		
+		assertAll(
+				
+				() ->	assertEquals(1, Temp.validateCall1),
+				() ->	assertTrue(ret),
+				() ->	assertEquals(1,Temp.validateCall2)
+					
+					);
 	}
 	
 	@Test
@@ -28,10 +36,14 @@ class StateTest {
 		Temp.r1 = 1;
 		Temp.r2 =  1;
 		boolean returnResult = stateObj.bValidateFailure();
-		assertEquals(false, returnResult);
-		assertEquals(1, Temp.validateCall1);
-		assertEquals(1,Temp.validateCall2);
 		
+		assertAll(
+			
+			() ->	assertEquals(1, Temp.validateCall1),
+			() ->	assertEquals(false, returnResult),
+			() ->	assertEquals(1,Temp.validateCall2)
+				
+				);
 	}
 	
 	@Test
