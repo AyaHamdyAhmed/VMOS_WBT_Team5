@@ -2,5 +2,5 @@ package vehicle.app;
 
 public class Global {
 
-	public static int iState;
+	public static int iState=0;
 }
