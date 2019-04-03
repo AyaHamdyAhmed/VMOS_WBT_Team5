@@ -2,6 +2,7 @@ package vehicle.app;
 
 public class State {
 	
+	
 	public Boolean bValidateFailure() {
 		return false;
 	}
@@ -12,5 +13,9 @@ public class State {
 	
 	public Boolean bValidateHighPerformance() {
 		return false;
+	}
+	
+	public void vidGoToNextState() {
+		
 	}
 }
