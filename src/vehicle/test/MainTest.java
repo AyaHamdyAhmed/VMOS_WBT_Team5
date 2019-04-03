@@ -14,6 +14,7 @@ class MainTest {
 		assertAll(
 				()-> assertEquals(1,state.validate_call_bValidateGoToNextState),
 				
+				
 				);
 	
 	}
