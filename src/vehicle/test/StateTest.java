@@ -3,18 +3,31 @@ package vehicle.test;
 import static org.junit.jupiter.api.Assertions.*;
 import vehicle.app.Global;
 import vehicle.app.State;
+import vehicle.hal.Temp;
 
 import org.junit.jupiter.api.Test;
 
 
 class StateTest {
-
+	State stateObj;
+	
+	
+	
+	
+	
 	@Test
-	void testState() {
+	void testbValidateFailure_F() {
+		stateObj = new State();
+		Temp.r1 = 1;
+		Temp.r2 =  1;
+		boolean returnResult = stateObj.bValidateFailure();
+		assertEquals(false, returnResult);
+		assertEquals(Temp.validateCall1, 1);
+		assertEquals(Temp.validateCall2, 1);
 		
 	}
 	
-	State stateObj;
+	
 	
 	@Test
 	void testVidGoToNextState_T_F_F() {
