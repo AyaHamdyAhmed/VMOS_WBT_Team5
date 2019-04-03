@@ -1,23 +1,19 @@
 package vehicle.test;
 
 import static org.junit.jupiter.api.Assertions.*;
+import vehicle.app.Global;
+import vehicle.app.State;
 
 import org.junit.jupiter.api.Test;
 
-<<<<<<< HEAD
+
 class StateTest {
 
 	@Test
 	void testState() {
 		
 	}
-
-=======
-import vehicle.app.Global;
-import vehicle.app.State;
-
-class StateTest {
-
+	
 	State stateObj;
 	
 	@Test
@@ -56,5 +52,4 @@ class StateTest {
 	
 	}
 	
->>>>>>> master
 }
