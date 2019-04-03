@@ -17,13 +17,12 @@ class StateTest {
 		Temp.r1 = 1;
 		Temp.r2 = 2;
 		boolean ret = stateObj.bValidateFailure();	
+
 		assertAll(
-				
-				() ->	assertEquals(1, Temp.validateCall1),
-				() ->	assertTrue(ret),
-				() ->	assertEquals(1,Temp.validateCall2)
-					
-					);
+			() ->	assertEquals(1, Temp.validateCall1),
+			() ->	assertEquals(1, Temp.validateCall2),
+			() ->	assertTrue(ret)
+				);
 	}
 	
 	@Test
@@ -32,7 +31,6 @@ class StateTest {
 		Temp.r1 = 1;
 		Temp.r2 =  1;
 		boolean returnResult = stateObj.bValidateFailure();
-		
 		assertAll(
 			
 			() ->	assertEquals(1, Temp.validateCall1),
