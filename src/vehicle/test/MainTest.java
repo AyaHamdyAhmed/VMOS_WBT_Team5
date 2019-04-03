@@ -13,7 +13,7 @@ public class MainTest {
 
 
 	@Test
-	void validateMaintest() {
+	public void validateMaintest() {
 
 		
 

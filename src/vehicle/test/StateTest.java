@@ -11,7 +11,7 @@ import org.junit.jupiter.api.Test;
 	State stateObj;
 
 	@Test
-	void testbValidateFailure_T() {
+	public void testbValidateFailure_T() {
 		stateObj = new State();
 		Temp.r1 = 1;
 		Temp.r2 = 2;
@@ -25,7 +25,7 @@ import org.junit.jupiter.api.Test;
 	}
 	
 	@Test
-	void testbValidateFailure_F() {
+	public void testbValidateFailure_F() {
 		stateObj = new State();
 		Temp.r1 = 1;
 		Temp.r2 =  1;
@@ -40,7 +40,7 @@ import org.junit.jupiter.api.Test;
 	}
 	
 	@Test
-	void testVidGoToNextState_T_F_F() {
+	public void testVidGoToNextState_T_F_F() {
 		stateObj = new State();
 		stateObj.vidGoToNextState();
 		//soft assert
@@ -49,11 +49,12 @@ import org.junit.jupiter.api.Test;
 		() -> assertEquals(0,State.validate_call_bValidateLowPerformance),
 		() -> assertEquals(0,State.validate_call_bValidateHighPerformance),
 		() -> assertEquals(1,State.validate_call_times),
-		() -> assertEquals(4,Global.iState));
+		() -> assertEquals(4,Global.iState)
+		);
 	}
 	
 	@Test
-	void testVidGoToNextState_F_T_F() {
+	public void testVidGoToNextState_F_T_F() {
 		stateObj = new State();
 		stateObj.vidGoToNextState();
 		//soft assert
@@ -62,11 +63,12 @@ import org.junit.jupiter.api.Test;
 		() -> assertEquals(1,State.validate_call_bValidateLowPerformance),
 		() -> assertEquals(0,State.validate_call_bValidateHighPerformance),
 		() -> assertEquals(2,State.validate_call_times),
-		() -> assertEquals(1,Global.iState));
+		() -> assertEquals(1,Global.iState)
+		);
 	}
 
 	@Test
-	void testVidGoToNextState_F_F_T() {
+	public void testVidGoToNextState_F_F_T() {
 		stateObj = new State();
 		stateObj.vidGoToNextState();
 		//soft assert
@@ -75,11 +77,12 @@ import org.junit.jupiter.api.Test;
 		() -> assertEquals(1,State.validate_call_bValidateLowPerformance),
 		() -> assertEquals(1,State.validate_call_bValidateHighPerformance),
 		() -> assertEquals(3,State.validate_call_times),
-		() -> assertEquals(2,Global.iState));
+		() -> assertEquals(2,Global.iState)
+		);
 	
 	}
 	@Test
-	void testVidGoToNextState_F_F_F() {
+	public void testVidGoToNextState_F_F_F() {
 		stateObj = new State();
 		stateObj.vidGoToNextState();
 		//soft assert
@@ -88,7 +91,8 @@ import org.junit.jupiter.api.Test;
 		() -> assertEquals(1,State.validate_call_bValidateLowPerformance),
 		() -> assertEquals(1,State.validate_call_bValidateHighPerformance),
 		() -> assertEquals(3,State.validate_call_times),
-		() -> assertEquals(3,Global.iState));
+		() -> assertEquals(3,Global.iState)
+		);
 	}
 	
 }
