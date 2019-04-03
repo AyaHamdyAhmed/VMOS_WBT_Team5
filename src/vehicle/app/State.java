@@ -1,8 +1,7 @@
 package vehicle.app;
 
 public class State {
-	
-	
+
 	public Boolean bValidateFailure() {
 		return false;
 	}
