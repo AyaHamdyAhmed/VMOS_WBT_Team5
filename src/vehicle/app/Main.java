@@ -8,6 +8,6 @@ public class Main {
 		State state = new State();
 		state.vidGoToNextState();
 		LCD.vidOutput(Global.iState);
-		Motor.vidOutput(Global.iState);	
+		Motor.vidOutput(Global.iState);
 	}
 }
