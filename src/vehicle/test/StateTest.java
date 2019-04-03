@@ -6,9 +6,8 @@ import vehicle.app.State;
 import vehicle.hal.Temp;
 import org.junit.jupiter.api.Test;
 
-
-
-public class StateTest {	
+ public class StateTest {
+	
 	State stateObj;
 
 	@Test
