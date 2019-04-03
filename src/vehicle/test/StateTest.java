@@ -5,14 +5,9 @@ import vehicle.app.Global;
 import vehicle.app.State;
 import vehicle.hal.Temp;
 
-<<<<<<< HEAD
 import org.junit.jupiter.api.Test;
-=======
  public class StateTest {
->>>>>>> master
-
-
-class StateTest {	
+	
 	State stateObj;
 
 	@Test
