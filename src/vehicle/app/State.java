@@ -54,7 +54,7 @@ public class State {
 =======
 	public void vidGoToNextState()
 	{
-	
+	validate_call_bValidateGoToNextState++;
 	}
 }
  

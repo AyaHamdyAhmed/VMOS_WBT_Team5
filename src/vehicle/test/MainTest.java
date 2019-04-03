@@ -12,7 +12,7 @@ class MainTest {
 	void validateMaintest() {
 		state = new State();
 		assertAll(
-				()-> assertEquals(1,state.vidGoToNextState()),
+				()-> assertEquals(1,state.validate_call_bValidateGoToNextState),
 				
 				
 				);
