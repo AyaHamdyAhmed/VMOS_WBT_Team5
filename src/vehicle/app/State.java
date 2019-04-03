@@ -7,6 +7,7 @@ public class State {
 	public static int validate_call_bValidateFailure =0;
 	public static int validate_call_bValidateLowPerformance =0;
 	public static int validate_call_bValidateHighPerformance =0;
+	public static int validate_call_bValidateGoToNextState=0;
 
 =======
 
@@ -39,7 +40,7 @@ public class State {
 <<<<<<< HEAD
 	public void vidGoToNextState() {
  
-		
+	validate_call_bValidateGoToNextState++;
 		
 	}
 
