@@ -8,7 +8,10 @@ class MainTest {
 
 	@Test
 	void validateMaintest() {
-		
+		assertAll(
+				()-> assertEquals();
+				
+				);
 	
 	}
 
