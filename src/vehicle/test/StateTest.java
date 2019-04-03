@@ -21,7 +21,7 @@ import org.junit.jupiter.api.Test;
 			() ->	assertEquals(1, Temp.validateCall1),
 			() ->	assertEquals(1, Temp.validateCall2),
 			() ->	assertTrue(ret)
-				);
+			);
 	}
 	
 	@Test
