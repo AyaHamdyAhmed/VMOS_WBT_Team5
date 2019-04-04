@@ -6,9 +6,10 @@ import org.junit.runner.Result;
 public class TestRunner {
 
 	public static void main(String args[]) {
-		Result result = new JUnitCore().run(AllTests.class);
+		Result result = new JUnitCore().run(AllTestsn.class);
 		System.out.println("The number of test cases passed " + (result.getRunCount() - result.getFailureCount()));
 		System.out.println("The number of test cases failed " + result.getFailureCount());
+
 
 	}
 }

@@ -21,7 +21,7 @@ main = new Main();
 main.vidMain();
 		// soft assert
 		assertAll(
-				() -> assertEquals(1, State.validate_call_bValidateGoToNextState),
+				() -> assertEquals(0, State.validate_call_bValidateGoToNextState),
 				()-> assertEquals(0,Motor.motorState),
 				()-> assertEquals(0,LCD.lcdState),
 				() -> assertEquals(1, LCD.lcdcall),
