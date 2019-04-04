@@ -45,6 +45,7 @@ import org.junit.jupiter.api.Test;
 		stateObj.vidGoToNextState();
 		//soft assert
 		assertAll(
+		() -> assertTrue(stateObj.bValidateFailure()),		
 		() -> assertEquals(1,State.validate_call_bValidateFailure),
 		() -> assertEquals(0,State.validate_call_bValidateLowPerformance),
 		() -> assertEquals(0,State.validate_call_bValidateHighPerformance),
@@ -59,6 +60,8 @@ import org.junit.jupiter.api.Test;
 		stateObj.vidGoToNextState();
 		//soft assert
 		assertAll(
+		() -> assertTrue(!stateObj.bValidateFailure()),
+		() -> assertTrue(stateObj.bValidateLowPerformance()),
 		() -> assertEquals(1,State.validate_call_bValidateFailure),
 		() -> assertEquals(1,State.validate_call_bValidateLowPerformance),
 		() -> assertEquals(0,State.validate_call_bValidateHighPerformance),
@@ -73,6 +76,9 @@ import org.junit.jupiter.api.Test;
 		stateObj.vidGoToNextState();
 		//soft assert
 		assertAll(
+		() -> assertTrue(!stateObj.bValidateFailure()),
+		() -> assertTrue(!stateObj.bValidateLowPerformance()),
+		() -> assertTrue(stateObj.bValidateHighPerformance()),
 		() -> assertEquals(1,State.validate_call_bValidateFailure),
 		() -> assertEquals(1,State.validate_call_bValidateLowPerformance),
 		() -> assertEquals(1,State.validate_call_bValidateHighPerformance),
@@ -87,6 +93,9 @@ import org.junit.jupiter.api.Test;
 		stateObj.vidGoToNextState();
 		//soft assert
 		assertAll(
+		() -> assertTrue(!stateObj.bValidateFailure()),
+		() -> assertTrue(!stateObj.bValidateLowPerformance()),
+		() -> assertTrue(!stateObj.bValidateHighPerformance()),
 		() -> assertEquals(1,State.validate_call_bValidateFailure),
 		() -> assertEquals(1,State.validate_call_bValidateLowPerformance),
 		() -> assertEquals(1,State.validate_call_bValidateHighPerformance),
