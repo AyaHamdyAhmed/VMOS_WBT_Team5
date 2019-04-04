@@ -18,6 +18,8 @@ import vehicle.hal.Temp;
 		stateObj = new State();
 		Temp.r1 = 1;
 		Temp.r2 = 2;
+		Temp.validateCall1 = 0;
+		Temp.validateCall2 = 0;
 		boolean ret = stateObj.bValidateFailure();	
 
 		assertAll(
@@ -32,6 +34,8 @@ import vehicle.hal.Temp;
 		stateObj = new State();
 		Temp.r1 = 1;
 		Temp.r2 =  1;
+		Temp.validateCall1 = 0;
+		Temp.validateCall2 = 0;
 		boolean returnResult = stateObj.bValidateFailure();
 		assertAll(
 			
