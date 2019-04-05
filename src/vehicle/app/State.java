@@ -7,11 +7,12 @@ public class State {
 	public static int validate_call_bValidateGoToNextState=0;
 	public static int validate_call_number = 0;
 	public static int validate_sequence = 0;
-
+	public static int validate_sequence2 = 0;
 	public Boolean bValidateFailure()
 	{
 		validate_call_bValidateFailure++;
 		validate_sequence = 1;
+		validate_sequence2 = 1;
 		return true;
 	}
 
@@ -19,6 +20,7 @@ public class State {
 	{
 		validate_call_bValidateLowPerformance ++;
 		validate_sequence = 2;
+		validate_sequence2 = 2;
 		return false;
 	}
 	

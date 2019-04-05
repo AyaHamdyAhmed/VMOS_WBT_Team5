@@ -85,6 +85,7 @@ import vehicle.hal.Temp;
 	public void testVidGoToNextState_F_F_T() {
 		stateObj = new State();
 		State.validate_sequence = 0;
+		State.validate_sequence2 = 0;
 		Global.iState = 0;
 		stateObj.vidGoToNextState();
 		//soft assert
@@ -95,6 +96,7 @@ import vehicle.hal.Temp;
 		() -> assertEquals(1,State.validate_call_bValidateFailure),
 		() -> assertEquals(1,State.validate_call_bValidateLowPerformance),
 		() -> assertEquals(1,State.validate_call_bValidateHighPerformance),
+		() -> assertEquals(2,State.validate_sequence2),
 		() -> assertEquals(3,State.validate_sequence),
 		() -> assertEquals(2,Global.iState)
 		);
@@ -104,6 +106,7 @@ import vehicle.hal.Temp;
 	public void testVidGoToNextState_F_F_F() {
 		stateObj = new State();
 		State.validate_sequence = 0;
+		State.validate_sequence2 = 0;
 		Global.iState = 0;
 		stateObj.vidGoToNextState();
 		//soft assert
@@ -114,6 +117,7 @@ import vehicle.hal.Temp;
 		() -> assertEquals(1,State.validate_call_bValidateFailure),
 		() -> assertEquals(1,State.validate_call_bValidateLowPerformance),
 		() -> assertEquals(1,State.validate_call_bValidateHighPerformance),
+		() -> assertEquals(2,State.validate_sequence2),
 		() -> assertEquals(3,State.validate_sequence),
 		() -> assertEquals(3,Global.iState)
 		);
